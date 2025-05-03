@@ -13,32 +13,55 @@
 
 
 <body onclick="click_fun(event)">
-    <nav>
-        <div class="header-fixed">
-            <div class="nav-logo fleft"><span style="line-height: 60px;">为你筑梦</span></div>
-            <div class="nav-menubar fright">
-                <ul id="nav-list">
-                    <li class="current"><a href="#part_1">首页</a></li>
-                    <li><a href="https://www.csdn.net/">博客</a></li>
-                    <li><a href="#part_3">考研规划</a></li>
-                    <li><a href="https://www.runoob.com/tags/att-a-href.html">HTML技术链接</a></li>
-                    <li><a href="#part_2">致最真挚的</a></li>
-                    <li><a href="#part_5">关于</a></li>
+    <nav class="fixed top-0 left-0 right-0 shadow-md z-50 header-bg">
+        <div class="container mx-auto px-4 flex justify-between items-center h-16">
+            <div class="text-xl font-bold text-white">为你筑梦</div>
+            <div class="hidden md:block w-full max-w-md">
+                <ul class="nav-list">
+                    <li class="nav-link"><a href="#part_1" class="text-white hover:text-blue-500">首页</a></li>
+                    <li class="nav-link"><a href="https://www.csdn.net/" class="text-white hover:text-blue-500">CSDN</a></li>
+                    <li class="nav-link"><a href="#part_3" class="text-white hover:text-blue-500">自我介绍</a></li>
+                    <li class="nav-link"><a href="https://www.runoob.com/tags/att-a-href.html" class="text-white hover:text-blue-500">Runoob</a></li>
+                    <li class="nav-link"><a href="#part_2" class="text-white hover:text-blue-500">致最真挚的</a></li>
+                    <li class="nav-link"><a href="#part_5" class="text-white hover:text-blue-500">关于</a></li>
                 </ul>
             </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-white focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-50">
+            <ul class="px-4 py-2 space-y-2">
+                <li class="nav-link"><a href="#part_1" class="block text-white hover:text-blue-500">首页</a></li>
+                <li class="nav-link"><a href="https://www.csdn.net/" class="block text-white hover:text-blue-500">CSDN</a></li>
+                <li class="nav-link"><a href="#part_3" class="block text-white hover:text-blue-500">自我介绍</a></li>
+                <li class="nav-link"><a href="https://www.runoob.com/tags/att-a-href.html" class="block text-white hover:text-blue-500">Runoob</a></li>
+                <li class="nav-link"><a href="#part_2" class="block text-white hover:text-blue-500">致最真挚的</a></li>
+                <li class="nav-link"><a href="#part_5" class="block text-white hover:text-blue-500">关于</a></li>
+            </ul>
         </div>
     </nav>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
     <div class="part_1" id="part_1">
         <div class="part_1_title">
             <div class="inner">
                 <h2>今日心情</h2>
             </div>
             <div class="title">
-                <p>心灵偶尔孤寂</p>
-                <p>但愿一声同志可以让我不再沉寂，孤独</p>
-		<p>要民主，要自由，要进步，要人民当家做主而不是继续为奴</p>
-		<p>什么时候我可以站起身板做人，不再惧怕丑恶，敢于正视自我</p>
-		<p>过了今天，又将踏上考研之路，喵的，全是不创造价值的社会内卷，早晚有一天要再次砸碎这万恶的旧世界</p>	
+                <p>与天奋斗，其乐无穷</p>
+                <p>与地奋斗，其乐无穷</p>
+		<p>与人奋斗，其乐无穷</p>
+		<p>热爱生活，勤学笃志</p>
+		<p>排除万难去争取胜利</p>
             </div>
         </div>
         <div class="guide">
@@ -55,7 +78,7 @@
     <div class="part_2" id="part_2">
         <div class="container">
             <div class="brief_major">
-                — 教员语录 —
+                — 学习 —
             </div>
             <div class="brief_paragraph">
                 <p>谁是我们的敌人，谁是我们的朋友，这个问题是革命的首要问题。</p>
@@ -73,97 +96,26 @@
 	
     <div class="part_3" id="part_3">
        <div class="container">
-           <div class="brief_major">
-               — 考研初试时间表 —
-           </div>
-           <div class="brief_paragraph">
-           	<table>
-      		<tr>
-    			<td>科目</td>
-			<td>														</td>
-    			<td>基础（今---5月31日）</td>
-			<td>														</td>
-    			<td>基础+强化（6月1日--7月31日）</td>
-			<td>														</td>
-    			<td>强化（8月1日--9月30日）</td>
-			<td>														</td>
-			<td>冲刺（10月1日--11月30日）</td>
-			<td>														</td>
-			<td>基础+冲刺（12月1日--12月24日）</td> 
-     		</tr>
-	    	<tr>
-    			<td>数学</td>
-			<td>														</td>
-			<td>掌握大部分的知识点</td>
-			<td>														</td>
-			<td>掌握所有知识点+按导图复习+刷真题与练习册</td>
-			<td>														</td>
-			<td>专题突破+刷熟练度+二刷三刷真题练习册</td>
-			<td>														</td>
-			<td>模拟测试+回顾总结错题</td>
-			<td>														</td>
-			<td>模拟测试+基础知识回顾</td> 
-	    	</tr>
-	    	<tr>
-    			<td>专业</td>
-			<td>														</td>
-			<td>掌握大部分的知识点+明白是怎么一回事</td>
-			<td>														</td>
-			<td>认真看书掌握所有知识点+按章节导图刷王道题</td>
-			<td>														</td>
-			<td>二刷三刷真题与王道题+专题突破</td>
-			<td>														</td>
-			<td>模拟测试+再次完整的看一遍书+错题对应的专题</td>
-			<td>														</td>
-			<td>模拟测试</td> 
-	    	</tr>
-	   	<tr>
-    			<td>英语</td>
-			<td>														</td>
-			<td>单词过一轮+阅读专题（真题至10年）</td>
-			<td>														</td>
-			<td>核心单词与真题单词过一遍+小三门专题+刷真题（真题至18年）</td>
-			<td>														</td>
-			<td>二刷真题+作文专题+二刷单词+回顾套路技巧</td>
-			<td>														</td>
-			<td>核心真题词汇+翻译作文词汇+模拟测试技巧练习</td>
-			<td>														</td>
-			<td>作文模版+三刷真题词汇+模拟</td>
-	    	</tr>
-	    	<tr>
-    			<td>政治</td>
-			<td>														</td>
-			<td>了解马原基本内容+时政热点分析</td>
-			<td>														</td>
-			<td>读一读毛选</td>
-			<td>														</td>
-			<td>徐涛强化课程+刷题</td>
-			<td>														</td>
-			<td>刷题+模拟+时政</td>
-			<td>														</td>
-			<td>模拟+时政</td>
-	    	</tr>
-    		</table>
-           </div>
+          <div>自我介绍和个人项目 待更新</div>
        </div>
     </div>
 
     <div class="part_4"  id="part_4">
             <div class="container">
                 <div class="brief_major">
-                    — 啥也不是，五一快乐，何时再起国际歌？ —
+                    — 工具 —
                 </div>
                 <div class="list">
                     <ul>
                         <li>
                             <figcaption>
-                                <figcaption><a href="https://www.acwing.com/activity/content/introduction/48/" target="_blank">AcWing</a></figcaption>
+                                <figcaption><a href="https://www.acwing.com/activity/content/introduction/48/" target="_blank">算法学习</a></figcaption>
                                 <img src="static/images/acwing.jpg" width="100%" height="220" />
                             </figcaption>
                         </li>
                         <li>
                             <figcaption>
-                                <figcaption><a href="https://www.geogebra.org/calculator" target="_blank">计算器套件</a></figcaption>
+                                <figcaption><a href="https://www.geogebra.org/calculator" target="_blank">3D计算器</a></figcaption>
                                 <img src="static/images/爱的艺术.jpg" width="100%" height="220" />
                             </figcaption>
                         </li>
@@ -175,7 +127,7 @@
                         </li>
                         <li>
                             <figcaption>
-                                <figcaption><a href="https://wx.zsxq.com/dweb2/index/group/28851151228551" target="_blank">知识星球</a></figcaption>
+                                <figcaption><a href="https://kingpolewang.github.io/" target="_blank">请务必刷新1000000次</a></figcaption>
                                 <img src="static/images/zhishixingqiu.jpg" width="100%" height="220" />
                             </figcaption>
                         </li>
@@ -187,7 +139,7 @@
                         </li>
                         <li>
                             <figcaption>
-                                <figcaption><a href="https://www.bilibili.com/video/BV1WD4y1g7tg/?spm_id_from=333.1007.top_right_bar_window_custom_collection.content.click&vd_source=3de5de28541966d55abe4091330e80db" target="_blank">青春不想褪色</a></figcaption>
+                                <figcaption><a href="https://kingpolewang.github.io/#part_3" target="_blank">个人项目</a></figcaption>
                                 <img src="static/images/qingchun.jpg" width="100%" height="220" />
                             </figcaption>
                         </li>
@@ -201,24 +153,26 @@
                 — 自我叙述 —
             </div>
             <div class="brief_paragraph">
-		<p>本人是一名共产主义者，首先忠于信仰忠于人民，其次忠于个人</p>
-		<p>偶像：教员，马克思，格瓦拉，周树人</p>
-		<p>技术：人工智能领域+大数据领域</p>
+		<p>一名计算机科学与技术专业在读硕士研究生</p>
+		<p>擅长技术：SpringBoot+Vue+Mybatis ，Django</p>
+		<p>专业兴趣：算法，机器学习，深度学习，大数据处理</p>p
 		<p>任一兴趣交流请致：w_king0831@163.com</p>	
-		<p>声明：此net仅用于个人便捷查询</p>
+		<p>目前在学习：人工智能，Unit3D</p>
+		<p>保持年轻的秘诀：谎报年龄，还有每天都偷着乐！</p>
             </div>
         </div>
     </div>
     <footer>
         <div class="container">
             <div class="more"></div>
-            <div class="copyright">Copyright © 20230501 想去热爱</div>
+            <div class="copyright">Copyright © 20250 保持热爱</div>
         </div>
     </footer>
 
     <!-- 背景雪花特效 -->
     <script src="static/js/snowflakes.min.js"></script>
     <script src="static/js/snow_load.js"></script>
+    <script src="https://api.vvhan.com/api/script/yinghua"></script>
     <!-- index.js -->
     <script>
         // 原生js写法
@@ -236,5 +190,7 @@
             }
         }
     </script>
+
+
 </body>
 </html>
